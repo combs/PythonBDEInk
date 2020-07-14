@@ -5,8 +5,9 @@ def make_ext(modname, pyxfilename):
     print("pyxbld hello from " + base)
     ext = Extension(
         modname,
-        sources=[pyxfilename, "../libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c"],
+        sources=["../libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c", pyxfilename],
         language='c++',
+        libraries=['bcm2835'],
         include_dirs=[base + '/../libraries/eastrising/029_1R/bcm2835/obj/', base + '/../libraries/bcm2835/src/'])
 
     ext.cython_directives = {'language_level': 3}
