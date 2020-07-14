@@ -5,7 +5,7 @@ def make_ext(modname, pyxfilename):
     print("pyxbld hello from " + base)
     ext = Extension(
         modname,
-        sources=[pyxfilename, base + "/../libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c"],
+        sources=[pyxfilename, "../libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c"],
         language='c++',
         include_dirs=[base + '/../libraries/eastrising/029_1R/bcm2835/obj/', base + '/../libraries/bcm2835/src/'])
 
