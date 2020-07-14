@@ -28,6 +28,7 @@ Info:
 ******************************************************************************/
 UBYTE DEV_ModuleInit(void)
 {
+    printf("start");
     if(!bcm2835_init()) {
         printf("bcm2835 init failed  !!! \r\n");
         return 1;
