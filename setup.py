@@ -13,7 +13,7 @@ BDEInk2_9_Red = Extension(
 
 
 setup(
-    name="BDEInk2_9_Red",
+    name="PythonBDEInk",
     version='1.0',
     author='Chris Combs',
     author_email='ccombs@gmail.com',
