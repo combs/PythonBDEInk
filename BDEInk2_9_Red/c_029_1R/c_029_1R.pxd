@@ -9,5 +9,4 @@ cdef extern from "../libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.h":
     void EPD_Clear()
     void EPD_Display(bytes blackimage, bytes redimage)
     void EPD_Sleep()
-    void EPD_SetLut()
 
