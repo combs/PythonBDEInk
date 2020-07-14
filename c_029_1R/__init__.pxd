@@ -1,1 +1,1 @@
-from c_029_1R.c_029_1R cimport DEV_ModuleInit
+from c_029_1R.c_029_1R cimport DEV_ModuleInit, EPD_Init

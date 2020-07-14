@@ -1,1 +1,1 @@
-from .c_029_1R import DEV_ModuleInit
+from .c_029_1R import DEV_ModuleInit, EPD_Init
