@@ -8,15 +8,14 @@
             "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.h"
         ],
         "include_dirs": [
-            "../libraries/eastrising/029_1R/bcm2835/obj/,",
-            "../libraries/bcm2835/src/",
             "./c_029_1R"
         ],
         "name": "BDEInk2_9_Red",
         "sources": [
             "BDEInk2_9_Red/BDEInk2_9_Red.pyx",
             "libraries/bcm2835/src/bcm2835.c",
-            "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c"
+            "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c",
+            "libraries/eastrising/029_1R/bcm2835/obj/DEV_Config.c"
         ]
     },
     "module_name": "BDEInk2_9_Red"
@@ -832,8 +831,7 @@ static const char *__pyx_f[] = {
   "stringsource",
 };
 
-/* "c_029_1R/c_029_1R.pxd":4
- * # distutils: include_dirs = ../libraries/eastrising/029_1R/bcm2835/obj/, ../libraries/bcm2835/src/
+/* "c_029_1R/c_029_1R.pxd":2
  * 
  * ctypedef int uint8_t             # <<<<<<<<<<<<<<
  * 
