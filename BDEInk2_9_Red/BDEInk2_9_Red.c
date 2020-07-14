@@ -846,7 +846,7 @@ struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red;
  * 
  * cdef class BDEInk2_9_Red (object):             # <<<<<<<<<<<<<<
  *     cpdef start(self)
- *     cpdef render(self,image1,image2)
+ *     cpdef clear(self)
  */
 struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red {
   PyObject_HEAD
@@ -865,6 +865,7 @@ struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red {
 
 struct __pyx_vtabstruct_13BDEInk2_9_Red_BDEInk2_9_Red {
   PyObject *(*start)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, int __pyx_skip_dispatch);
+  PyObject *(*clear)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, int __pyx_skip_dispatch);
   PyObject *(*render)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, PyObject *, PyObject *, int __pyx_skip_dispatch);
   PyObject *(*stop)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, int __pyx_skip_dispatch);
 };
@@ -1227,7 +1228,8 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_start(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_image1, CYTHON_UNUSED PyObject *__pyx_v_image2, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_clear(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v_image1, PyObject *__pyx_v_image2, int __pyx_skip_dispatch); /* proto*/
 static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from 'c_029_1R.c_029_1R' */
@@ -1252,6 +1254,7 @@ static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_stop[] = "stop";
 static const char __pyx_k_test[] = "__test__";
+static const char __pyx_k_clear[] = "clear";
 static const char __pyx_k_print[] = "print";
 static const char __pyx_k_start[] = "start";
 static const char __pyx_k_image1[] = "image1";
@@ -1287,6 +1290,7 @@ static PyObject *__pyx_kp_s_Could_not_EPD_Init;
 static PyObject *__pyx_n_s_IOError;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0xd4;
 static PyObject *__pyx_n_s_PickleError;
+static PyObject *__pyx_n_s_clear;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_end;
@@ -1320,10 +1324,11 @@ static PyObject *__pyx_kp_s_stringsource;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_start(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2render(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v_image1, PyObject *__pyx_v_image2); /* proto */
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4stop(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6__reduce_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_8__setstate_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2clear(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4render(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v_image1, PyObject *__pyx_v_image2); /* proto */
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6stop(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_8__reduce_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_10__setstate_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_13BDEInk2_9_Red___pyx_unpickle_BDEInk2_9_Red(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_13BDEInk2_9_Red_BDEInk2_9_Red(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_222419149;
@@ -1475,8 +1480,8 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_start(CYTHON_UNUSED str
  *             raise IOError("Could not EPD_Init")
  *         # print(mod.EPD_Init())
  *         return             # <<<<<<<<<<<<<<
- *     cpdef render(self,image1,image2):
- *         return
+ * 
+ *     cpdef clear(self):
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
@@ -1540,16 +1545,158 @@ static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_start(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "BDEInk2_9_Red.pyx":13
- *         # print(mod.EPD_Init())
+/* "BDEInk2_9_Red.pyx":14
  *         return
- *     cpdef render(self,image1,image2):             # <<<<<<<<<<<<<<
+ * 
+ *     cpdef clear(self):             # <<<<<<<<<<<<<<
+ *         c_029_1R.EPD_Clear()
  *         return
- *     cpdef stop(self):
  */
 
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v_image1, CYTHON_UNUSED PyObject *__pyx_v_image2, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3clear(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_clear(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, int __pyx_skip_dispatch) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  __Pyx_RefNannySetupContext("clear", 0);
+  /* Check if called by wrapper */
+  if (unlikely(__pyx_skip_dispatch)) ;
+  /* Check if overridden in Python */
+  else if (unlikely((Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0) || (Py_TYPE(((PyObject *)__pyx_v_self))->tp_flags & (Py_TPFLAGS_IS_ABSTRACT | Py_TPFLAGS_HEAPTYPE)))) {
+    #if CYTHON_USE_DICT_VERSIONS && CYTHON_USE_PYTYPE_LOOKUP && CYTHON_USE_TYPE_SLOTS
+    static PY_UINT64_T __pyx_tp_dict_version = __PYX_DICT_VERSION_INIT, __pyx_obj_dict_version = __PYX_DICT_VERSION_INIT;
+    if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
+      PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
+      #endif
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_clear); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3clear)) {
+        __Pyx_XDECREF(__pyx_r);
+        __Pyx_INCREF(__pyx_t_1);
+        __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
+        if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+          __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+          if (likely(__pyx_t_4)) {
+            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+            __Pyx_INCREF(__pyx_t_4);
+            __Pyx_INCREF(function);
+            __Pyx_DECREF_SET(__pyx_t_3, function);
+          }
+        }
+        __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+        __pyx_r = __pyx_t_2;
+        __pyx_t_2 = 0;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        goto __pyx_L0;
+      }
+      #if CYTHON_USE_DICT_VERSIONS && CYTHON_USE_PYTYPE_LOOKUP && CYTHON_USE_TYPE_SLOTS
+      __pyx_tp_dict_version = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
+      __pyx_obj_dict_version = __Pyx_get_object_dict_version(((PyObject *)__pyx_v_self));
+      if (unlikely(__pyx_type_dict_guard != __pyx_tp_dict_version)) {
+        __pyx_tp_dict_version = __pyx_obj_dict_version = __PYX_DICT_VERSION_INIT;
+      }
+      #endif
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      #if CYTHON_USE_DICT_VERSIONS && CYTHON_USE_PYTYPE_LOOKUP && CYTHON_USE_TYPE_SLOTS
+    }
+    #endif
+  }
+
+  /* "BDEInk2_9_Red.pyx":15
+ * 
+ *     cpdef clear(self):
+ *         c_029_1R.EPD_Clear()             # <<<<<<<<<<<<<<
+ *         return
+ * 
+ */
+  EPD_Clear();
+
+  /* "BDEInk2_9_Red.pyx":16
+ *     cpdef clear(self):
+ *         c_029_1R.EPD_Clear()
+ *         return             # <<<<<<<<<<<<<<
+ * 
+ *     cpdef render(self,image1,image2):
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+
+  /* "BDEInk2_9_Red.pyx":14
+ *         return
+ * 
+ *     cpdef clear(self):             # <<<<<<<<<<<<<<
+ *         c_029_1R.EPD_Clear()
+ *         return
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("BDEInk2_9_Red.BDEInk2_9_Red.clear", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = 0;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* Python wrapper */
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3clear(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3clear(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("clear (wrapper)", 0);
+  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2clear(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2clear(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("clear", 0);
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_clear(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("BDEInk2_9_Red.BDEInk2_9_Red.clear", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "BDEInk2_9_Red.pyx":18
+ *         return
+ * 
+ *     cpdef render(self,image1,image2):             # <<<<<<<<<<<<<<
+ *         c_029_1R.EPD_Display(image1,image2)
+ *         return
+ */
+
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5render(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v_image1, PyObject *__pyx_v_image2, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1568,9 +1715,9 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED st
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_render); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_render); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5render)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -1588,7 +1735,7 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED st
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_image1, __pyx_v_image2};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
@@ -1596,13 +1743,13 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED st
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
           PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_image1, __pyx_v_image2};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_2);
         } else
         #endif
         {
-          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 13, __pyx_L1_error)
+          __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -1613,7 +1760,7 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED st
           __Pyx_INCREF(__pyx_v_image2);
           __Pyx_GIVEREF(__pyx_v_image2);
           PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_image2);
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         }
@@ -1636,23 +1783,34 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED st
     #endif
   }
 
-  /* "BDEInk2_9_Red.pyx":14
- *         return
+  /* "BDEInk2_9_Red.pyx":19
+ * 
  *     cpdef render(self,image1,image2):
- *         return             # <<<<<<<<<<<<<<
- *     cpdef stop(self):
+ *         c_029_1R.EPD_Display(image1,image2)             # <<<<<<<<<<<<<<
  *         return
+ * 
+ */
+  if (!(likely(PyBytes_CheckExact(__pyx_v_image1))||((__pyx_v_image1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_image1)->tp_name), 0))) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_v_image2))||((__pyx_v_image2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_image2)->tp_name), 0))) __PYX_ERR(0, 19, __pyx_L1_error)
+  EPD_Display(((PyObject*)__pyx_v_image1), ((PyObject*)__pyx_v_image2));
+
+  /* "BDEInk2_9_Red.pyx":20
+ *     cpdef render(self,image1,image2):
+ *         c_029_1R.EPD_Display(image1,image2)
+ *         return             # <<<<<<<<<<<<<<
+ * 
+ *     cpdef stop(self):
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
 
-  /* "BDEInk2_9_Red.pyx":13
- *         # print(mod.EPD_Init())
+  /* "BDEInk2_9_Red.pyx":18
  *         return
+ * 
  *     cpdef render(self,image1,image2):             # <<<<<<<<<<<<<<
+ *         c_029_1R.EPD_Display(image1,image2)
  *         return
- *     cpdef stop(self):
  */
 
   /* function exit code */
@@ -1671,8 +1829,8 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(CYTHON_UNUSED st
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5render(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5render(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_image1 = 0;
   PyObject *__pyx_v_image2 = 0;
   PyObject *__pyx_r = 0;
@@ -1701,11 +1859,11 @@ static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render(PyObject *__py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_image2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("render", 1, 2, 2, 1); __PYX_ERR(0, 13, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("render", 1, 2, 2, 1); __PYX_ERR(0, 18, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "render") < 0)) __PYX_ERR(0, 13, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "render") < 0)) __PYX_ERR(0, 18, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1718,26 +1876,26 @@ static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render(PyObject *__py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("render", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 13, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("render", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 18, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("BDEInk2_9_Red.BDEInk2_9_Red.render", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2render(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self), __pyx_v_image1, __pyx_v_image2);
+  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4render(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self), __pyx_v_image1, __pyx_v_image2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2render(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v_image1, PyObject *__pyx_v_image2) {
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4render(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v_image1, PyObject *__pyx_v_image2) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("render", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(__pyx_v_self, __pyx_v_image1, __pyx_v_image2, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render(__pyx_v_self, __pyx_v_image1, __pyx_v_image2, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -1754,15 +1912,15 @@ static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_2render(struct __pyx_o
   return __pyx_r;
 }
 
-/* "BDEInk2_9_Red.pyx":15
- *     cpdef render(self,image1,image2):
- *         return
- *     cpdef stop(self):             # <<<<<<<<<<<<<<
+/* "BDEInk2_9_Red.pyx":22
  *         return
  * 
+ *     cpdef stop(self):             # <<<<<<<<<<<<<<
+ *         c_029_1R.EPD_Sleep()
+ *         return
  */
 
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5stop(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7stop(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
 static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1780,9 +1938,9 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED stru
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_type_dict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_stop); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_stop); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5stop)) {
+      if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)(void*)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7stop)) {
         __Pyx_XDECREF(__pyx_r);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -1797,7 +1955,7 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED stru
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 15, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_r = __pyx_t_2;
@@ -1818,9 +1976,18 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED stru
     #endif
   }
 
-  /* "BDEInk2_9_Red.pyx":16
- *         return
+  /* "BDEInk2_9_Red.pyx":23
+ * 
  *     cpdef stop(self):
+ *         c_029_1R.EPD_Sleep()             # <<<<<<<<<<<<<<
+ *         return
+ * 
+ */
+  EPD_Sleep();
+
+  /* "BDEInk2_9_Red.pyx":24
+ *     cpdef stop(self):
+ *         c_029_1R.EPD_Sleep()
  *         return             # <<<<<<<<<<<<<<
  * 
  */
@@ -1828,12 +1995,12 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED stru
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
 
-  /* "BDEInk2_9_Red.pyx":15
- *     cpdef render(self,image1,image2):
- *         return
- *     cpdef stop(self):             # <<<<<<<<<<<<<<
+  /* "BDEInk2_9_Red.pyx":22
  *         return
  * 
+ *     cpdef stop(self):             # <<<<<<<<<<<<<<
+ *         c_029_1R.EPD_Sleep()
+ *         return
  */
 
   /* function exit code */
@@ -1851,25 +2018,25 @@ static PyObject *__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(CYTHON_UNUSED stru
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5stop(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5stop(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7stop(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7stop(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("stop (wrapper)", 0);
-  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4stop(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self));
+  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6stop(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4stop(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self) {
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6stop(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("stop", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -1893,19 +2060,19 @@ static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_4stop(struct __pyx_obj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_9__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_9__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6__reduce_cython__(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self));
+  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_8__reduce_cython__(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6__reduce_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self) {
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_8__reduce_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -2119,19 +2286,19 @@ static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_6__reduce_cython__(str
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_9__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_11__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_11__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_8__setstate_cython__(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_10__setstate_cython__(((struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_8__setstate_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_13BDEInk2_9_Red_13BDEInk2_9_Red_10__setstate_cython__(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2562,10 +2729,11 @@ static void __pyx_tp_dealloc_13BDEInk2_9_Red_BDEInk2_9_Red(PyObject *o) {
 
 static PyMethodDef __pyx_methods_13BDEInk2_9_Red_BDEInk2_9_Red[] = {
   {"start", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_1start, METH_NOARGS, 0},
-  {"render", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3render, METH_VARARGS|METH_KEYWORDS, 0},
-  {"stop", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5stop, METH_NOARGS, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_9__setstate_cython__, METH_O, 0},
+  {"clear", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_3clear, METH_NOARGS, 0},
+  {"render", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_5render, METH_VARARGS|METH_KEYWORDS, 0},
+  {"stop", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_7stop, METH_NOARGS, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_9__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_13BDEInk2_9_Red_13BDEInk2_9_Red_11__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
@@ -2690,6 +2858,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_IOError, __pyx_k_IOError, sizeof(__pyx_k_IOError), 0, 0, 1, 1},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0xd4, __pyx_k_Incompatible_checksums_s_vs_0xd4, sizeof(__pyx_k_Incompatible_checksums_s_vs_0xd4), 0, 0, 1, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
+  {&__pyx_n_s_clear, __pyx_k_clear, sizeof(__pyx_k_clear), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
@@ -2819,6 +2988,7 @@ static int __Pyx_modinit_type_init_code(void) {
   /*--- Type init code ---*/
   __pyx_vtabptr_13BDEInk2_9_Red_BDEInk2_9_Red = &__pyx_vtable_13BDEInk2_9_Red_BDEInk2_9_Red;
   __pyx_vtable_13BDEInk2_9_Red_BDEInk2_9_Red.start = (PyObject *(*)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, int __pyx_skip_dispatch))__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_start;
+  __pyx_vtable_13BDEInk2_9_Red_BDEInk2_9_Red.clear = (PyObject *(*)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, int __pyx_skip_dispatch))__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_clear;
   __pyx_vtable_13BDEInk2_9_Red_BDEInk2_9_Red.render = (PyObject *(*)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, PyObject *, PyObject *, int __pyx_skip_dispatch))__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_render;
   __pyx_vtable_13BDEInk2_9_Red_BDEInk2_9_Red.stop = (PyObject *(*)(struct __pyx_obj_13BDEInk2_9_Red_BDEInk2_9_Red *, int __pyx_skip_dispatch))__pyx_f_13BDEInk2_9_Red_13BDEInk2_9_Red_stop;
   if (PyType_Ready(&__pyx_type_13BDEInk2_9_Red_BDEInk2_9_Red) < 0) __PYX_ERR(0, 4, __pyx_L1_error)

@@ -10,8 +10,16 @@ cdef class BDEInk2_9_Red(object):
             raise IOError("Could not EPD_Init")
         # print(mod.EPD_Init())
         return
-    cpdef render(self,image1,image2):
+    
+    cpdef clear(self):
+        c_029_1R.EPD_Clear()
         return
+
+    cpdef render(self,image1,image2):
+        c_029_1R.EPD_Display(image1,image2)
+        return
+
     cpdef stop(self):
+        c_029_1R.EPD_Sleep()
         return
         

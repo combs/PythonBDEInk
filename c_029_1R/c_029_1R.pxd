@@ -6,8 +6,8 @@ cdef extern from "../libraries/eastrising/029_1R/bcm2835/obj/DEV_Config.h":
 
 cdef extern from "../libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.h":
     uint8_t EPD_Init()
-    EPD_Clear()
-    EPD_Display(bytearray blackimage, bytearray redimage)
-    EPD_Sleep()
-    EPD_SetLut()
+    void EPD_Clear()
+    void EPD_Display(bytes blackimage, bytes redimage)
+    void EPD_Sleep()
+    void EPD_SetLut()
 
