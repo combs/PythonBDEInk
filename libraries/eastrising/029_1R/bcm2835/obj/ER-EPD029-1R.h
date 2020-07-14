@@ -2,8 +2,7 @@
 //Web: http://www.buydisplay.com
 EastRising Technology Co.,LTD
 ****************************************************/
-#ifndef _EPD2IN9_H
-#define _EPD2IN9_H
+
 
 #include "DEV_Config.h"
 
@@ -41,5 +40,3 @@ void EPD_Clear(void);
 void EPD_Display(const UBYTE *blackimage, const UBYTE *redimage);
 void EPD_Sleep(void);
 void EPD_SetLut(void);
-
-#endif

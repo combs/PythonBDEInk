@@ -1,0 +1,4 @@
+../libraries/eastrising/029_1R/bcm2835/obj/*
+../libraries/bcm2835/src/*
+*.pxd
+*.pyxdep

@@ -2,6 +2,8 @@
 //Web: http://www.buydisplay.com
 EastRising Technology Co.,LTD
 ****************************************************/
+#ifndef _DEV_CONFIG_H_
+#define _DEV_CONFIG_H_
 
 #include <bcm2835.h>
 #include <stdint.h>
@@ -42,3 +44,5 @@ EastRising Technology Co.,LTD
 UBYTE DEV_ModuleInit(void);
 void DEV_ModuleExit(void);
 
+
+#endif
