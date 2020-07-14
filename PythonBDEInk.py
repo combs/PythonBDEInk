@@ -4,7 +4,7 @@ import os
 
 base = os.path.dirname(os.path.realpath(__file__))
 # pyximport.install(setup_args={'include_dirs': [ base + '/libraries/eastrising/029_1R/bcm2835/obj/' , base + '/libraries/bcm2835/src/'] })
-pyximport.install(inplace=True)
+pyximport.install(build_in_temp=False, inplace=True)
 
 import signal, sys, time, socket, subprocess, platform
 
