@@ -3,3 +3,5 @@
 *.pxd
 *.pyxdep
 *.pyxbld
+../c_029_1R/*
+*.pyx
