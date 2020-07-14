@@ -7,9 +7,9 @@ base = os.path.dirname(os.path.realpath(__file__))
 print("setup.py hello from " + base)
 
 
-BDEInk2_9_Red = Extension(
-    name="BDEInk2_9_Red",
-    sources=["BDEInk2_9_Red/BDEInk2_9_Red.pyx","libraries/bcm2835/src/bcm2835.c", "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c", "libraries/eastrising/029_1R/bcm2835/obj/DEV_Config.c"])
+PythonBDEInk = Extension(
+    name="PythonBDEInk",
+    sources=["PythonBDEInk/BDEInk2_9_Red/BDEInk2_9_Red.pyx","libraries/bcm2835/src/bcm2835.c", "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c", "libraries/eastrising/029_1R/bcm2835/obj/DEV_Config.c"])
 
 
 setup(
@@ -17,5 +17,5 @@ setup(
     version='1.0',
     author='Chris Combs',
     author_email='ccombs@gmail.com',
-    ext_modules=cythonize([BDEInk2_9_Red])
+    ext_modules=cythonize([PythonBDEInk])
 )
