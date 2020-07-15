@@ -5,7 +5,7 @@ cdef class BDEInk2_9_Red(object):
     deviceinit = False
     cpdef start(self):
         print("hi")
-        if self.deviceinit = False:
+        if self.deviceinit == False:
             if c_029_1R.DEV_ModuleInit() > 0:
                 raise IOError("Could not DEV_ModuleInit")
             else:
