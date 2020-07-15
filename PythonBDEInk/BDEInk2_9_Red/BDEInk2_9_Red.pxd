@@ -1,7 +1,6 @@
 
 cdef class BDEInk2_9_Red (object):
 
-    cdef public bint deviceinit 
 
     cpdef start(self)
     cpdef clear(self)

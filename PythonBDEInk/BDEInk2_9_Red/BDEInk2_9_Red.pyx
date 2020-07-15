@@ -3,6 +3,8 @@ cimport c_029_1R
 
 cdef class BDEInk2_9_Red(object):
 
+    cdef public bint deviceinit 
+    
     def __init__(self):
         self.deviceinit = False
 
