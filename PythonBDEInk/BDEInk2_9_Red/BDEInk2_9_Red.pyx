@@ -2,7 +2,10 @@
 cimport c_029_1R
 
 cdef class BDEInk2_9_Red(object):
-    deviceinit = False
+
+    def __init__(self):
+        self.deviceinit = False
+
     cpdef start(self):
         print("hi")
         if self.deviceinit == False:
