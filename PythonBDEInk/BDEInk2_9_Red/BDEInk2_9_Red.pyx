@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# encoding: utf-8
+# distutils: language = c++
+# cython: language_level=3
+from __future__ import print_function
 
 cimport c_029_1R
 import time
