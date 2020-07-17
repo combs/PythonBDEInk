@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# distutils: language = c++
 # cython: language_level=3
 from __future__ import print_function
 
@@ -33,10 +32,10 @@ cdef class BDEInk2_9_Red(object):
         c_029_1R.EPD_Clear()
         return
 
-    cpdef render(self,image1,image2):
+    cpdef render(self, int[:] image1, int[:] image2):
         seconds = time.time() - self.timeLastUpdated
         if seconds < self.refreshLock:
-            print("Another render was requested after",seconds,"seconds. To prevent hardware damage, EInk updates can only occur every",self.refreshLock,"seconds")
+            print("Another render was requested after " + str(seconds) + " seconds. To prevent hardware damage, EInk updates can only occur every " + str(self.refreshLock) + " seconds")
             return
         c_029_1R.EPD_Display(image1,image2)
         self.timeLastUpdated = time.time()
