@@ -1,15 +1,19 @@
 
 cimport c_029_1R
+import time
 
 cdef class BDEInk2_9_Red(object):
 
     cdef public bint deviceinit 
-    
+    cdef public double timeLastUpdated
+    cdef public int refreshLock
+
     def __init__(self):
         self.deviceinit = False
+        self.refreshLock = 300
+        self.timeLastUpdated = time.time() - self.refreshLock
 
     cpdef start(self):
-        print("hi")
         if self.deviceinit == False:
             if c_029_1R.DEV_ModuleInit() > 0:
                 raise IOError("Could not DEV_ModuleInit")
@@ -25,7 +29,12 @@ cdef class BDEInk2_9_Red(object):
         return
 
     cpdef render(self,image1,image2):
+        seconds = time.time() - self.timeLastUpdated
+        if seconds < self.refreshLock:
+            print("Another render was requested after",seconds,"seconds. To prevent hardware damage, EInk updates can only occur every",self.refreshLock,"seconds")
+            return
         c_029_1R.EPD_Display(image1,image2)
+        self.timeLastUpdated = time.time()
         return
 
     cpdef stop(self):
