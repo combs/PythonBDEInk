@@ -32,7 +32,7 @@ cdef class BDEInk2_9_Red(object):
         c_029_1R.EPD_Clear()
         return
 
-    cpdef render(self, int[:] image1, int[:] image2):
+    cpdef render(self, unsigned int[:] image1, unsigned int[:] image2):
         seconds = time.time() - self.timeLastUpdated
         if seconds < self.refreshLock:
             print("Another render was requested after " + str(seconds) + " seconds. To prevent hardware damage, EInk updates can only occur every " + str(self.refreshLock) + " seconds")
