@@ -4,7 +4,7 @@
 from __future__ import print_function
 
 cimport c_029_1R
-import time
+import time, os
 
 cdef class BDEInk2_9_Red(object):
 
