@@ -14,7 +14,7 @@ cdef class BDEInk2_9_Red(object):
 
     def __init__(self):
         self.deviceinit = False
-        self.refreshLock = 300
+        self.refreshLock = 180
         self.timeLastUpdated = time.time() - self.refreshLock
 
     cpdef start(self):
