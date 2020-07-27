@@ -37,6 +37,10 @@ cdef class BDEInk2_9_Red(object):
         if seconds < self.refreshLock:
             print("Another render was requested after " + str(seconds) + " seconds. To prevent hardware damage, EInk updates can only occur every " + str(self.refreshLock) + " seconds")
             return
+        with os.open("/tmp/black.raw","wb") as f:
+            f.write(image1)
+        with os.open("/tmp/red.raw","wb") as f:
+            f.write(image2)
         c_029_1R.EPD_Display(image1,image2)
         self.timeLastUpdated = time.time()
         return
