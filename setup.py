@@ -9,7 +9,7 @@ print("setup.py hello from " + base)
 
 PythonBDEInk = Extension(
     name="PythonBDEInk",
-    sources=["PythonBDEInk/BDEInk2_9_Red/BDEInk2_9_Red.pyx","libraries/bcm2835/src/bcm2835.c", "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c", "libraries/eastrising/029_1R/bcm2835/obj/DEV_Config.c"])
+    sources=["PythonBDEInk/BDEInk2_9_Red/BDEInk2_9_Red.pyx","libraries/bcm2835/src/bcm2835.c", "libraries/eastrising/029_1R/bcm2835/obj/ER-EPD029-1R.c", "libraries/eastrising/029_1R/bcm2835/obj/DEV_Config.c"], include_dirs=["libraries/bcm2835/src"])
 
 
 setup(
